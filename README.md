@@ -13,9 +13,9 @@ Welcome to my solution to the first project. I intend to walk you through a) how
 
 ### How to run my solution
 
-(As a quick side note: The environment I coded in was the Udacity project space. I am not sure how this runs off the website.)
-
 This project can be run pretty simply by running each cell (in Navigation.iynb) t should make all the necessary imports to external files and packages enough to function as it runs on my computer. 
+
+A list of requirements can be found in this repo (requirements.txt) if you'd like to run off udacity.
 
 By doing the above steps, the program will finish in about 600 episodes depending on the goal reward (I chose 13.5, above the required 13). This will output a checkpoints.pth file which is the weights of the network. 
 
