@@ -1,25 +1,31 @@
-[//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+# Overview  
 
-# Project 1: Navigation
+This project is part of the Value-Based Methods course in Udacity's Deep Reinforcement Learning Nanodegree. The goal of this project is to train a reinforcement learning agent in an environment similar to Unity's Banana Collector environment to collect yellow bananas and avoid blue bananas. 
 
-### Introduction
+## Environment
+The agent's state is fully observable. The observation/state size is 37 and the action size is 4. The agent can select between the four discrete actions:
 
+- `0` - move forward
+- `1` - move backward
+- `2` - move left
+- `3` - move right
 
-![Trained Agent][image1]
+At each timestep, the agent receives a reward of +1 if it collects a yellow banana, and a reward of -1 if it collects a blue banana. The aim is to train the agent to select the best action so that it achieves an average reward of +13 over 100 consecutive episodes. 
 
-Welcome to my solution to the first project. I intend to walk you through a) how my project works/the details of the design b) the steps neccessary to run my project.
+## Agent
+The agent is an implementation of the Deep-Q Network algorithm. Details will be discussed further in the included report.
 
-### How to run my solution
+# Installation
 
-This project can be run pretty simply by running each cell (in Navigation.iynb) t should make all the necessary imports to external files and packages enough to function as it runs on my computer. 
+- To set up an Anaconda environment to run this code, you can follow the instructions included [here](https://github.com/udacity/deep-reinforcement-learning#dependencies). These instructions include:
 
-A list of requirements can be found in this repo (requirements.txt) if you'd like to run off udacity.
+  - Creating a new environment
+  - Installing OpenAI gym
+  - Cloning Udacity's deep reinforcement learning repository and installing dependencies
+  - Creating and running the IPython kernel in the Jupyter notebook that provides the solution to this project. 
+- The Banana executable (Banana.exe) for the environment is included in this repository and works for Windows 10 (64 bit).
 
-By doing the above steps, the program will finish in about 600 episodes depending on the goal reward (I chose 13.5, above the required 13). This will output a checkpoints.pth file which is the weights of the network. 
-
-### How my solution works
-
-I used a similar configuration to the deep q network that was used in a previous challenge. The parameters I changed were as follows: the state space - 37 length array, the action space - 4 (up, down, left, right), and the network nodes/layers - 64 nodes and 2 hidden layers.
-
+# Usage
+- The solution to this project is provided in the Navigation notebook (Navigation.ipynb). Run each section of the notebook sequentially to train the agent. (You can skip Section 3, "Take Random Actions in the Environment," as this only displays random behavior of an untrained agent.)
+- To view the details of the DQN implementation, see model.py and dqn_agent.py. 
